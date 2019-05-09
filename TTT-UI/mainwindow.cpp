@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "tile.h"
 #include <QtTest/QTest>
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -45,3 +46,8 @@ void MainWindow::FillBoardRandomly()
         QTest::qWait(250);
     }
 }
+
+
+
+
+

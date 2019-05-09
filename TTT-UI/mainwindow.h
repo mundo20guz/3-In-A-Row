@@ -19,6 +19,8 @@ public:
 
     //User-defined public functions/proprerties.
     void FillBoardRandomly();
+    void InitializeWindow();
+
 
 private:
 

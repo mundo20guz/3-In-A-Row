@@ -24,167 +24,16 @@
     <string notr="true">background-color:rgb(0, 0, 0)</string>
    </property>
    <layout class="QGridLayout" name="gridLayout">
-    <item row="10" column="2">
-     <layout class="QGridLayout" name="tile_2_2">
+    <property name="leftMargin">
+     <number>9</number>
+    </property>
+    <item row="9" column="2">
+     <layout class="QGridLayout" name="tile_2_1">
       <property name="spacing">
        <number>0</number>
       </property>
       <item row="0" column="0">
-       <widget class="QLabel" name="label_73">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(121, 208, 255);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="2">
-       <widget class="QLabel" name="label_78">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(121, 208, 255);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QLabel" name="label_77">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(121, 208, 255);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QLabel" name="label_74">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(121, 208, 255);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="label_76">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(121, 208, 255);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="2">
-       <widget class="QLabel" name="label_75">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(121, 208, 255);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0">
-       <widget class="QLabel" name="label_79">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(121, 208, 255);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="1">
-       <widget class="QLabel" name="label_80">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(121, 208, 255);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="2">
-       <widget class="QLabel" name="label_81">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(121, 208, 255);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="9" column="0">
-     <layout class="QGridLayout" name="tile_0_1">
-      <property name="leftMargin">
-       <number>0</number>
-      </property>
-      <property name="spacing">
-       <number>0</number>
-      </property>
-      <item row="1" column="2">
-       <widget class="QLabel" name="label_15">
+       <widget class="QLabel" name="label_64">
         <property name="styleSheet">
          <string notr="true">background-color: rgb(255, 106, 106);</string>
         </property>
@@ -200,23 +49,7 @@
        </widget>
       </item>
       <item row="1" column="0">
-       <widget class="QLabel" name="label_13">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 106, 106);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QLabel" name="label_14">
+       <widget class="QLabel" name="label_67">
         <property name="styleSheet">
          <string notr="true">background-color: rgb(255, 106, 106);</string>
         </property>
@@ -232,7 +65,7 @@
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QLabel" name="label_11">
+       <widget class="QLabel" name="label_65">
         <property name="styleSheet">
          <string notr="true">background-color: rgb(255, 106, 106);</string>
         </property>
@@ -248,7 +81,7 @@
        </widget>
       </item>
       <item row="0" column="2">
-       <widget class="QLabel" name="label_12">
+       <widget class="QLabel" name="label_66">
         <property name="styleSheet">
          <string notr="true">background-color: rgb(255, 106, 106);</string>
         </property>
@@ -263,8 +96,24 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="label_10">
+      <item row="1" column="1">
+       <widget class="QLabel" name="label_68">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 106, 106);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="label_69">
         <property name="styleSheet">
          <string notr="true">background-color: rgb(255, 106, 106);</string>
         </property>
@@ -280,7 +129,7 @@
        </widget>
       </item>
       <item row="2" column="0">
-       <widget class="QLabel" name="label_16">
+       <widget class="QLabel" name="label_70">
         <property name="styleSheet">
          <string notr="true">background-color: rgb(255, 106, 106);</string>
         </property>
@@ -296,7 +145,7 @@
        </widget>
       </item>
       <item row="2" column="1">
-       <widget class="QLabel" name="label_17">
+       <widget class="QLabel" name="label_71">
         <property name="styleSheet">
          <string notr="true">background-color: rgb(255, 106, 106);</string>
         </property>
@@ -312,160 +161,9 @@
        </widget>
       </item>
       <item row="2" column="2">
-       <widget class="QLabel" name="label_18">
+       <widget class="QLabel" name="label_72">
         <property name="styleSheet">
          <string notr="true">background-color: rgb(255, 106, 106);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="9" column="1">
-     <layout class="QGridLayout" name="tile_1_1">
-      <property name="spacing">
-       <number>0</number>
-      </property>
-      <item row="2" column="3">
-       <widget class="QLabel" name="label_3">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(121, 208, 255);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="1">
-       <widget class="QLabel" name="label_7">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(121, 208, 255);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="3">
-       <widget class="QLabel" name="label_9">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(121, 208, 255);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="2">
-       <widget class="QLabel" name="label">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(121, 208, 255);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="1">
-       <widget class="QLabel" name="label_2">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(121, 208, 255);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="2">
-       <widget class="QLabel" name="label_5">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(121, 208, 255);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="3">
-       <widget class="QLabel" name="label_6">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(121, 208, 255);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="1">
-       <widget class="QLabel" name="label_4">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(121, 208, 255);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="2">
-       <widget class="QLabel" name="label_8">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(121, 208, 255);</string>
         </property>
         <property name="frameShape">
          <enum>QFrame::Box</enum>
@@ -617,157 +315,6 @@
        <widget class="QLabel" name="label_45">
         <property name="styleSheet">
          <string notr="true">background-color: rgb(255, 106, 106);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="0" column="0">
-     <layout class="QGridLayout" name="tile_0_0">
-      <property name="spacing">
-       <number>0</number>
-      </property>
-      <item row="1" column="1">
-       <widget class="QLabel" name="label_32">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(121, 208, 255);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="2">
-       <widget class="QLabel" name="label_30">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(121, 208, 255);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="label_28">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(121, 208, 255);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QLabel" name="label_29">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(121, 208, 255);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="label_31">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(121, 208, 255);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="2">
-       <widget class="QLabel" name="label_33">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(121, 208, 255);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0">
-       <widget class="QLabel" name="label_34">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(121, 208, 255);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="1">
-       <widget class="QLabel" name="label_35">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(121, 208, 255);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="2">
-       <widget class="QLabel" name="label_36">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(121, 208, 255);</string>
         </property>
         <property name="frameShape">
          <enum>QFrame::Box</enum>
@@ -1084,13 +631,469 @@
       </item>
      </layout>
     </item>
-    <item row="9" column="2">
-     <layout class="QGridLayout" name="tile_2_1">
+    <item row="10" column="2">
+     <layout class="QGridLayout" name="tile_2_2">
       <property name="spacing">
        <number>0</number>
       </property>
       <item row="0" column="0">
-       <widget class="QLabel" name="label_64">
+       <widget class="QLabel" name="label_73">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(121, 208, 255);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="label_78">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(121, 208, 255);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="label_77">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(121, 208, 255);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="label_74">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(121, 208, 255);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_76">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(121, 208, 255);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_75">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(121, 208, 255);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_79">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(121, 208, 255);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="label_80">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(121, 208, 255);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLabel" name="label_81">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(121, 208, 255);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="9" column="1">
+     <layout class="QGridLayout" name="tile_1_1">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item row="2" column="3">
+       <widget class="QLabel" name="label_3">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(121, 208, 255);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLabel" name="label_7">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(121, 208, 255);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="3">
+       <widget class="QLabel" name="label_9">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(121, 208, 255);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLabel" name="label">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(121, 208, 255);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="label_2">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(121, 208, 255);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QLabel" name="label_5">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(121, 208, 255);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3">
+       <widget class="QLabel" name="label_6">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(121, 208, 255);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLabel" name="label_4">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(121, 208, 255);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2">
+       <widget class="QLabel" name="label_8">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(121, 208, 255);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="tile_0_0">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item row="1" column="1">
+       <widget class="QLabel" name="label_32">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(121, 208, 255);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_30">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(121, 208, 255);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_28">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(121, 208, 255);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="label_29">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(121, 208, 255);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_31">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(121, 208, 255);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="label_33">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(121, 208, 255);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_34">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(121, 208, 255);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="label_35">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(121, 208, 255);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLabel" name="label_36">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(121, 208, 255);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="9" column="0">
+     <layout class="QGridLayout" name="tile_0_1">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item row="1" column="2">
+       <widget class="QLabel" name="label_15">
         <property name="styleSheet">
          <string notr="true">background-color: rgb(255, 106, 106);</string>
         </property>
@@ -1106,39 +1109,7 @@
        </widget>
       </item>
       <item row="1" column="0">
-       <widget class="QLabel" name="label_67">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 106, 106);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QLabel" name="label_65">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 106, 106);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="2">
-       <widget class="QLabel" name="label_66">
+       <widget class="QLabel" name="label_13">
         <property name="styleSheet">
          <string notr="true">background-color: rgb(255, 106, 106);</string>
         </property>
@@ -1154,7 +1125,7 @@
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QLabel" name="label_68">
+       <widget class="QLabel" name="label_14">
         <property name="styleSheet">
          <string notr="true">background-color: rgb(255, 106, 106);</string>
         </property>
@@ -1169,8 +1140,40 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="2">
-       <widget class="QLabel" name="label_69">
+      <item row="0" column="1">
+       <widget class="QLabel" name="label_11">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 106, 106);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_12">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 106, 106);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_10">
         <property name="styleSheet">
          <string notr="true">background-color: rgb(255, 106, 106);</string>
         </property>
@@ -1186,7 +1189,7 @@
        </widget>
       </item>
       <item row="2" column="0">
-       <widget class="QLabel" name="label_70">
+       <widget class="QLabel" name="label_16">
         <property name="styleSheet">
          <string notr="true">background-color: rgb(255, 106, 106);</string>
         </property>
@@ -1202,7 +1205,7 @@
        </widget>
       </item>
       <item row="2" column="1">
-       <widget class="QLabel" name="label_71">
+       <widget class="QLabel" name="label_17">
         <property name="styleSheet">
          <string notr="true">background-color: rgb(255, 106, 106);</string>
         </property>
@@ -1218,7 +1221,7 @@
        </widget>
       </item>
       <item row="2" column="2">
-       <widget class="QLabel" name="label_72">
+       <widget class="QLabel" name="label_18">
         <property name="styleSheet">
          <string notr="true">background-color: rgb(255, 106, 106);</string>
         </property>
