@@ -1,0 +1,3 @@
+{
+    "files": ["main.py", "tile.py", "board.py", "ui_board.py"]
+}
