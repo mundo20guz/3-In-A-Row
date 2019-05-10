@@ -19,7 +19,7 @@ from enum import Enum
 
 #############################################################################
 
-class GameStatus(Enum):
+class GameStatus():
 	""" Includes status of individual games
 	@ACTIVE = Game still in progress
 	@DRAW = Game resulted in a draw
@@ -32,7 +32,7 @@ class GameStatus(Enum):
 	O_WIN = 3
 
 
-class GridState(Enum):
+class GridState():
 	""" Includes states of individual grids
 	@EMPTY = Not occupied by either player
 	@PLAYER_X = Occupied by Player X
@@ -111,25 +111,26 @@ class Normal_Board():
 			if checkWin(column):
 				self.status = chooseWinner(column)
 				return
-		diag1 = [self.board[row][col] for (row,col) in zip(range(3), range(3))]
-		diag2 = [self.board[row][col] for (row,col) in zip(range(3), range(2,-1,-1))]
+		diag1 = [self.board[row][col] for row,col in zip(range(3), range(3))]
+		diag2 = [self.board[row][col] for row,col in zip(range(3), range(2,-1,-1))]
 		if checkWin(diag1):
 			self.status = chooseWinner(diag1)
 			return
 		if checkWin(diag2):
 			self.status = chooseWinner(diag2)
 			return
-		if len(self.empty_spaces()) > 0:
+		if len(self.emptySpaces()) > 0:
 			self.status = GameStatus.ACTIVE
 		else:
 			self.status = GameStatus.DRAW
 
 
-	def makeMove(self,player,row,col):
+	def makeMove(self,player,row,col,super=True):
 		""" Marks game board with player move
 		@param player: Player X or Player O
 		@param row: row of move (starting with 0)
 		@param col: column of move (starting with 0)
+		@param super: determine if normal or super tic tac toe
 		"""
 		if self.board[row][col] != GridState.EMPTY_SPACE:
 			print('Location is already taken.')
@@ -139,7 +140,7 @@ class Normal_Board():
 		self.decideBoardStatus()
 		if self.status == GameStatus.DRAW:
 			print('Draw!')
-		elif self.status != GameStatus.ACTIVE:
+		elif self.status != GameStatus.ACTIVE and not super:
 			print('Player {} wins!'.format(
 				GridState.PLAYER_X if self.status == GameStatus.X_WIN else GridState.PLAYER_O))
 
@@ -203,12 +204,42 @@ class Super_Board(Normal_Board):
 		pass
 
 	def decideBoardStatus(self):
-
-		def checkWin():
+		def checkWin(three_in_a_row):
 			""" Checks to see if game has ended, otherwise updates game status """
-			pass
-		def chooseWinner():
-			pass
+			check = three_in_a_row[0].status
+
+			for board in three_in_a_row:
+				if board.status != check or board.status == GameStatus.ACTIVE:
+					return False
+			else:
+				return True
+
+		def chooseWinner(three_in_a_row):
+			return GameStatus.O_WIN if GameStatus.O_WIN in three_in_a_row else GameStatus.X_WIN
+				
+		for row in self.board:
+			#print(row)
+			if checkWin(row):
+				self.status = chooseWinner(row)
+				return
+		for col in range(3):
+			column = [self.board[0][col],self.board[1][col],self.board[2][col]]
+			if checkWin(column):
+				self.status = chooseWinner(column)
+				return
+		diag1 = [self.board[row][col] for row,col in zip(range(3),range(3))]
+		diag2 = [self.board[row][col] for row,col in zip(range(3),range(2,-1,-1))]
+		if checkWin(diag1):
+			self.chooseWinner(diag1)
+			return
+		if checkWin(diag2):
+			self.chooseWinner(diag2)
+			return
+		self.status = GameStatus.DRAW
+		for row,col in zip(range(3),range(3)):
+			if self.board[row][col].status == GameStatus.ACTIVE:
+				self.status = GameStatus.ACTIVE
+				return
 
 	def makeMove(self,player,board_row,board_col,row,col):
 		""" Marks game board with player move
