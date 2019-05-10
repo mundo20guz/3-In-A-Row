@@ -16,27 +16,38 @@ import sys
 import os
 from board import *
 from player import *
+from minimax import *
 
 ###############################################################################
 
 class Game(object):
 
-	def __init__(self,player1,player2):
+	@property
+	def numMoves(self):
+		return self.__numMoves
+
+	@numMoves.setter
+	def numMoves(self,val):
+		self.__numMoves = val
+	
+	def __init__(self,board,playerX,playerO):
 		""" Constructor for start of new game """
-		self.player_X = player_X
-		self.player_O = player_O
-		self.board = Super_Board()
+		self.board = board
+		self.player_X = playerX
+		self.player_O = playerO
+		self.numMoves = 0
 
-	def start_game(self):
+	def startGame(self):
 		""" Create Logic to start and play a game """
-		pass
+		while self.board.status == GameStatus.ACTIVE:
+			self.player_X.makeMove(self.board,self)
+			if self.board.status != GameStatus.ACTIVE:
+				break
+			self.player_O.makeMove(self.board,self)
+			self.numMoves += 1
+		return self.board.status
 
-	def finish_game(self):
-		""" """
-		pass
-
-	def make_move(self):
-		""" """
-		pass
-		
+	def getRandomMove(self,player):
+		Player(playerName=player)
+		player.makeMove(self.board)
 
