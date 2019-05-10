@@ -13,10 +13,7 @@
 # tic-tac-toe game board. Also includes code for super tic-tac-toe board.
 #
 # Dependencies
-import sys
-import os
-from enum import Enum
-
+import itertools
 #############################################################################
 
 class GameStatus():
@@ -68,11 +65,6 @@ class Normal_Board():
 		""" Creates a new game board object """
 		self.board = self.clearBoard()
 		self.status = GameStatus.ACTIVE
-
-
-	def createBoard(self,game_board):
-		""" Creates GUI for game board """
-		pass
 
 	def getGridState(self,row,col):
 		""" Return 'X','O', or '' """
@@ -139,7 +131,7 @@ class Normal_Board():
 		self.board[row][col] = player
 		self.decideBoardStatus()
 		if self.status == GameStatus.DRAW:
-			print('Draw!')
+			pass
 		elif self.status != GameStatus.ACTIVE and not super:
 			print('Player {} wins!'.format(
 				GridState.PLAYER_X if self.status == GameStatus.X_WIN else GridState.PLAYER_O))
@@ -154,6 +146,16 @@ class Normal_Board():
 					empty_spaces.append((row,col))
 		return empty_spaces
 
+	def print_board(self):
+		print_string = ''
+		for row in range(3):
+			for col in range(3):
+				if self.getGridState(row,col) == GridState.EMPTY_SPACE:
+					print_string += '_ '
+				else:
+					print_string += self.getGridState(row,col) + ' '
+			print_string += '\n'
+		print(print_string)
 
 ##################### Super Tic-Tac-Toe Board #############################
 
@@ -199,10 +201,6 @@ class Super_Board(Normal_Board):
 				[Normal_Board(), Normal_Board(), Normal_Board()],
 				[Normal_Board(), Normal_Board(), Normal_Board()]]
 
-	def createBoard(self,game_board):
-		""" Creates GUI for game board """
-		pass
-
 	def decideBoardStatus(self):
 		def checkWin(three_in_a_row):
 			""" Checks to see if game has ended, otherwise updates game status """
@@ -215,10 +213,9 @@ class Super_Board(Normal_Board):
 				return True
 
 		def chooseWinner(three_in_a_row):
-			return GameStatus.O_WIN if GameStatus.O_WIN in three_in_a_row else GameStatus.X_WIN
+			return GameStatus.O_WIN if GameStatus.O_WIN == three_in_a_row[0].status else GameStatus.X_WIN
 				
 		for row in self.board:
-			#print(row)
 			if checkWin(row):
 				self.status = chooseWinner(row)
 				return
@@ -230,16 +227,17 @@ class Super_Board(Normal_Board):
 		diag1 = [self.board[row][col] for row,col in zip(range(3),range(3))]
 		diag2 = [self.board[row][col] for row,col in zip(range(3),range(2,-1,-1))]
 		if checkWin(diag1):
-			self.chooseWinner(diag1)
+			self.status = chooseWinner(diag1)
 			return
 		if checkWin(diag2):
-			self.chooseWinner(diag2)
+			self.status = chooseWinner(diag2)
 			return
 		self.status = GameStatus.DRAW
-		for row,col in zip(range(3),range(3)):
-			if self.board[row][col].status == GameStatus.ACTIVE:
-				self.status = GameStatus.ACTIVE
-				return
+		for row in range(3):
+			for col in range(3):
+				if self.board[row][col].status == GameStatus.ACTIVE:
+					self.status = GameStatus.ACTIVE
+
 
 	def makeMove(self,player,board_row,board_col,row,col):
 		""" Marks game board with player move
@@ -248,16 +246,18 @@ class Super_Board(Normal_Board):
 		@param j_pos: column of move (starting with 0)
 		"""
 		board = self.board[board_row][board_col]
-		if board.getGridState(row,col) != GridState.EMPTY_SPACE:
-			print('Location is already taken.')
+		if board.status != GameStatus.ACTIVE:
+			print('Board is not active.')
 			return
 		board.makeMove(player,row,col)
 		self.decideBoardStatus()
 		if self.status == GameStatus.DRAW:
 			print('Draw!')
+			self.nextGrid = [None,None]
 		elif self.status != GameStatus.ACTIVE:
 			print('Player {} wins!'.format(
 				GridState.PLAYER_X if self.status == GameStatus.X_WIN else GridState.PLAYER_O))
+			self.nextGrid = [None,None]
 		else:
 			nextBoard = self.board[row][col]
 			self.nextGrid = [row,col] if nextBoard.status == GameStatus.ACTIVE else [None,None]
@@ -269,4 +269,36 @@ class Super_Board(Normal_Board):
 		return grid.emptySpaces()
 
 
+	def availableBoards(self):
+		availableBoards = []
+		for row in range(3):
+			for col in range(3):
+				if self.board[row][col].status == GameStatus.ACTIVE:
+					availableBoards.append((row,col))
+		return availableBoards
+
+	def printMoves(self):
+		if self.nextGrid != [None,None]:
+			return self.board[self.nextGrid[0]][self.nextGrid[1]].emptySpaces()
+		else:
+			availableMoves = []
+			for boards in self.availableBoards():
+				for moves in self.board[boards[0]][boards[1]].emptySpaces():
+					availableMoves.append(moves)
+	# Option = 1: 9x9 board
+	# Option = 2: self.dimxself.dim board of mini wins
+	def print_board(self, option=1):
+		print_string = ''
+		for row in range(3):
+			for inner_row in range(3):
+				for col in range(3):
+					for inner_col in range(3):
+						if self.board[row][col].board[inner_row][inner_col] == GridState.EMPTY_SPACE:
+							print_string += '_ '
+						else:
+							print_string += self.board[row][col].board[inner_row][inner_col] + ' '
+					print_string += ' '
+				print_string += '\n'
+			print_string += '\n'
+		print(print_string)
 
