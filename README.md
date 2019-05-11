@@ -12,3 +12,13 @@ How to Play:
 2) Ensure that your computer has a Python 3.6 + version installed.
 3) Run main.py in a python interpreter of your choice. 
 4) Enjoy!
+
+
+board.py: Includes code for developing game board. Includes initial mash up of original 
+tic-tac-toe game board. Also includes code for super tic-tac-toe board.
+
+player.py: Includes code for 3 different types of Players. First a human player, then 
+a random player, and finally a player backed by the minimax algorithm.
+
+game.py: Includes code for creating a Game. Creates board, and 2 players. Includes logic to
+create sequence of game. Will determine winner.
