@@ -13,6 +13,7 @@ How to Play:
 3) Run main.py in a python interpreter of your choice. 
 4) Enjoy!
 
+Note:
 
 board.py: Includes code for developing game board. Includes initial mash up of original 
 tic-tac-toe game board. Also includes code for super tic-tac-toe board.
