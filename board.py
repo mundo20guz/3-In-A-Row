@@ -13,7 +13,8 @@
 # tic-tac-toe game board. Also includes code for super tic-tac-toe board.
 #
 # Dependencies
-import itertools
+# N/A
+
 #############################################################################
 
 class GameStatus():
@@ -66,6 +67,7 @@ class Normal_Board():
 		self.board = self.clearBoard()
 		self.status = GameStatus.ACTIVE
 
+
 	def getGridState(self,row,col):
 		""" Return 'X','O', or '' """
 		return self.board[row][col]
@@ -80,36 +82,22 @@ class Normal_Board():
 
 	def decideBoardStatus(self):
 		""" """
-		def checkWin(three_in_a_row):
-			""" Checks to see if game has ended, otherwise updates game status """
-			check = three_in_a_row[0]
-			# if all match first in row, then its a win
-			for grid in three_in_a_row:
-				if grid != check or grid == GridState.EMPTY_SPACE:
-					return False
-			else:
-				return True
-
-		def chooseWinner(three_in_a_row):
-			""" """
-			return GameStatus.O_WIN if GridState.PLAYER_O in three_in_a_row else GameStatus.X_WIN
-		
 		for row in self.board:
-			if checkWin(row):
-				self.status = chooseWinner(row)
+			if self.checkWin(row):
+				self.status = self.chooseWinner(row)
 				return
 		for col in range(3):
 			column = [self.board[0][col],self.board[1][col],self.board[2][col]]
-			if checkWin(column):
-				self.status = chooseWinner(column)
+			if self.checkWin(column):
+				self.status = self.chooseWinner(column)
 				return
 		diag1 = [self.board[row][col] for row,col in zip(range(3), range(3))]
 		diag2 = [self.board[row][col] for row,col in zip(range(3), range(2,-1,-1))]
-		if checkWin(diag1):
-			self.status = chooseWinner(diag1)
+		if self.checkWin(diag1):
+			self.status = self.chooseWinner(diag1)
 			return
-		if checkWin(diag2):
-			self.status = chooseWinner(diag2)
+		if self.checkWin(diag2):
+			self.status = self.chooseWinner(diag2)
 			return
 		if len(self.emptySpaces()) > 0:
 			self.status = GameStatus.ACTIVE
@@ -137,6 +125,24 @@ class Normal_Board():
 				GridState.PLAYER_X if self.status == GameStatus.X_WIN else GridState.PLAYER_O))
 
 
+	def checkWin(self,three_in_a_row):
+		""" Checks to see if game has ended, otherwise updates game status
+		@param three_in_a_row : sequence of 3 squares in a row (vert, horiz, or diag) 
+		"""
+		check = three_in_a_row[0]
+		# if all match first in row, then its a win
+		for grid in three_in_a_row:
+			if grid != check or grid == GridState.EMPTY_SPACE:
+				return False
+		else:
+			return True
+
+
+	def chooseWinner(self,three_in_a_row):
+		""" Determines who takes victory for 3-In-A-Row """
+		return GameStatus.O_WIN if GridState.PLAYER_O in three_in_a_row else GameStatus.X_WIN
+	
+
 	def emptySpaces(self):
 		""" Returns locations of empty board spaces """
 		empty_spaces = []
@@ -146,7 +152,9 @@ class Normal_Board():
 					empty_spaces.append((row,col))
 		return empty_spaces
 
+
 	def print_board(self):
+		""" Prints board to console """
 		print_string = ''
 		for row in range(3):
 			for col in range(3):
@@ -156,6 +164,7 @@ class Normal_Board():
 					print_string += self.getGridState(row,col) + ' '
 			print_string += '\n'
 		print(print_string)
+
 
 ##################### Super Tic-Tac-Toe Board #############################
 
@@ -189,11 +198,12 @@ class Super_Board(Normal_Board):
 
 	######################## Class Methods #############################
 
-
 	def __init__(self):
+		""" Constructor for Super Tic-Tac-Toe Board """
 		self.board = self.clearBoard()
 		self.nextGrid = [None,None]
 		self.status = GameStatus.ACTIVE
+
 
 	def clearBoard(self):
 		""" Creates an Empty Super Tic-Tac-Toe Board """
@@ -201,36 +211,25 @@ class Super_Board(Normal_Board):
 				[Normal_Board(), Normal_Board(), Normal_Board()],
 				[Normal_Board(), Normal_Board(), Normal_Board()]]
 
+
 	def decideBoardStatus(self):
-		def checkWin(three_in_a_row):
-			""" Checks to see if game has ended, otherwise updates game status """
-			check = three_in_a_row[0].status
-
-			for board in three_in_a_row:
-				if board.status != check or board.status == GameStatus.ACTIVE:
-					return False
-			else:
-				return True
-
-		def chooseWinner(three_in_a_row):
-			return GameStatus.O_WIN if GameStatus.O_WIN == three_in_a_row[0].status else GameStatus.X_WIN
-				
+		""" Determine Game Status, usually called after a player move """
 		for row in self.board:
-			if checkWin(row):
-				self.status = chooseWinner(row)
+			if self.checkWin(row):
+				self.status = self.chooseWinner(row)
 				return
 		for col in range(3):
 			column = [self.board[0][col],self.board[1][col],self.board[2][col]]
-			if checkWin(column):
-				self.status = chooseWinner(column)
+			if self.checkWin(column):
+				self.status = self.chooseWinner(column)
 				return
 		diag1 = [self.board[row][col] for row,col in zip(range(3),range(3))]
 		diag2 = [self.board[row][col] for row,col in zip(range(3),range(2,-1,-1))]
-		if checkWin(diag1):
-			self.status = chooseWinner(diag1)
+		if self.checkWin(diag1):
+			self.status = self.chooseWinner(diag1)
 			return
-		if checkWin(diag2):
-			self.status = chooseWinner(diag2)
+		if self.checkWin(diag2):
+			self.status = self.chooseWinner(diag2)
 			return
 		self.status = GameStatus.DRAW
 		for row in range(3):
@@ -242,8 +241,10 @@ class Super_Board(Normal_Board):
 	def makeMove(self,player,board_row,board_col,row,col):
 		""" Marks game board with player move
 		@param player: Player X or Player O
-		@param i_pos: row of move (starting with 0)
-		@param j_pos: column of move (starting with 0)
+		@param board_row: row of board (starting with 0)
+		@param board_col: column of board (starting with 0)
+		@param row: row of move (starting with 0)
+		@param col: column of move (starting with 0)
 		"""
 		board = self.board[board_row][board_col]
 		if board.status != GameStatus.ACTIVE:
@@ -263,6 +264,24 @@ class Super_Board(Normal_Board):
 			self.nextGrid = [row,col] if nextBoard.status == GameStatus.ACTIVE else [None,None]
 
 
+	def checkWin(self,three_in_a_row):
+		""" Checks to see if game has ended, otherwise updates game status
+		@param three_in_a_row : sequence of 3 squares in a row (vert, horiz, or diag) 
+		"""
+		check = three_in_a_row[0].status
+
+		for board in three_in_a_row:
+			if board.status != check or board.status == GameStatus.ACTIVE:
+				return False
+		else:
+			return True
+
+
+	def chooseWinner(self,three_in_a_row):
+		""" Determines who takes victory for 3-In-A-Row """
+		return GameStatus.O_WIN if GameStatus.O_WIN == three_in_a_row[0].status else GameStatus.X_WIN
+
+
 	def emptySpaces(self,location):
 		""" Returns locations of empty board spaces """
 		grid = self.board[location[0]][location[1]]
@@ -270,6 +289,7 @@ class Super_Board(Normal_Board):
 
 
 	def availableBoards(self):
+		""" Determine which boards in Super Board are still playable """
 		availableBoards = []
 		for row in range(3):
 			for col in range(3):
@@ -277,17 +297,9 @@ class Super_Board(Normal_Board):
 					availableBoards.append((row,col))
 		return availableBoards
 
-	def printMoves(self):
-		if self.nextGrid != [None,None]:
-			return self.board[self.nextGrid[0]][self.nextGrid[1]].emptySpaces()
-		else:
-			availableMoves = []
-			for boards in self.availableBoards():
-				for moves in self.board[boards[0]][boards[1]].emptySpaces():
-					availableMoves.append(moves)
-	# Option = 1: 9x9 board
-	# Option = 2: self.dimxself.dim board of mini wins
+
 	def print_board(self, option=1):
+		""" Prints board to the console """
 		print_string = ''
 		for row in range(3):
 			for inner_row in range(3):

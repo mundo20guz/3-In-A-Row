@@ -8,24 +8,23 @@
 #
 # Game.py
 #  
-# Includes code for developing game board. Includes initial mash up of game board
-# and states of possible moves.
-#
+# Includes code for creating a Game. Creates board, and 2 players. Includes logic to
+# create sequence of game. Will determine winner.
+
 # Dependencies
-import sys
-import os
 from board import *
 from player import *
-from minimax import *
 
 ###############################################################################
 
 class Game(object):
 
+	""" Property Getters """
 	@property
 	def numMoves(self):
 		return self.__numMoves
 
+	""" Property Setters """
 	@numMoves.setter
 	def numMoves(self,val):
 		self.__numMoves = val
@@ -46,8 +45,4 @@ class Game(object):
 			self.player_O.makeMove(self.board,self)
 			self.numMoves += 1
 		return self.board.status
-
-	def getRandomMove(self,player):
-		Player(playerName=player)
-		player.makeMove(self.board)
 
