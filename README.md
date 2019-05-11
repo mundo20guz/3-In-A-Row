@@ -11,4 +11,4 @@ How to Play:
 1) Download all the files in the repo.
 2) Ensure that your computer has a Python 3.6 + version installed.
 3) Run main.py in a python interpreter of your choice. 
-4.) Enjoy!
+4) Enjoy!
